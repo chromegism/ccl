@@ -10,6 +10,10 @@
     <li>windows - %USERPROFILE%/.vscode/extensions/</li>
     <li>mac     - I have no idea, I don't use mac</li>
 </ul>
+<p>When you open a .ccl or .cclh file in vscode, the logo and highlighting should change, if not, don't ask me.</p>
+<p>Move the cclc.py file into your folder, and you can compile with it using the terminal</p>
+
+<p>THE COMPILER DOESN'T CURRENTLY WORK</p>
 
 <h3>Compiler arguments</h3>
 
