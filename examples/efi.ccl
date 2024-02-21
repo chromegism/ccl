@@ -1,0 +1,8 @@
+include library "efi.cclh";
+
+function main() -> noreturn
+{
+    efi::printf("hello world");
+
+    efi::quit();
+}

@@ -1,0 +1,15 @@
+include library "standard.cclh";
+
+function add(int x, int y) -> int
+{
+    return x + y;
+}
+
+// this is a test comment
+
+function main() -> noreturn
+{
+    unsigned int num = add(2, 3);
+
+    standard::printf("num = {num}");
+}

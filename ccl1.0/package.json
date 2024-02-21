@@ -1,5 +1,5 @@
 {
-  "name": "help",
+  "name": "ccl",
   "displayName": "ccl",
   "description": "custom compiled language",
   "version": "0.0.1",
@@ -14,7 +14,11 @@
       "id": "ccl",
       "aliases": ["ccl", "ccl"],
       "extensions": [".ccl"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icons/logo.png",
+        "dark": "./icons/logo.png"
+      }
     }],
     "grammars": [{
       "language": "ccl",

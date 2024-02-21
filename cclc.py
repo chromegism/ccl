@@ -1,17 +1,39 @@
 import argparse
+import string
 
 class Token:
-    def __init__(self, id, value, lineNum, charNum):
-        self.id = id
+    def __init__(self, value, lineNum, charNum):
         self.value = value
         self.lineNum = lineNum
         self.charNum = charNum
         
     def __repr__(self):
-        return f'Token - id: {self.id}, value: {self.value}, line number: {self.lineNum}, character number: {self.charNum}'
+        return f'Token - value: {self.value}, line number: {self.lineNum}, character number: {self.charNum}'
 
 def lex(dat):
-    pass
+    word = ''
+    token_stack = []
+    line_count = 1
+    char_count = 1
+    
+    
+    
+    for letter in dat:
+        if letter in string.ascii_letters or letter in ['_', '"', "'"]:
+            word += letter
+            
+        else:
+            token_stack.append(Token(word, line_count, char_count))
+            word = ''
+            if letter == '\n':
+                char_count = 0
+                line_count += 1
+            
+        char_count += 1
+        
+    for i in token_stack:
+        print(i)
+            
 
 if __name__ == '__main__':
 

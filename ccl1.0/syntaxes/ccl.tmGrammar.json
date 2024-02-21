@@ -1,10 +1,42 @@
 {
     "scopeName": "source.ccl",
-    "patterns": [{"include": "ccl"}],
+    "patterns": [
+        {"include": "#keywords"},
+        {"include": "#declarations"},
+        {"include": "#strings"},
+        {"include": "#comments"},
+        {"include": "#types"},
+        {"include": "#operators"},
+        {"include": "#namespaces"}
+    ],
     "repository": {
-        "function": {
-            "match": "function",
+        "keywords": {
+            "match": "(?<![a-z])((library)|(file)|(noreturn)|(return))(?![a-z])",
             "name": "keyword"
+        },
+        "types": {
+            "match": "(?<![a-z])((bool)|(char)|(unsigned)|(long)|((int)|(float)(16|32|64)))(?![a-z])",
+            "name": "keyword"
+        },
+        "declarations": {
+            "match": "(?<![a-z])((include)|(function)|(define))(?![a-z])",
+            "name": "keyword.control"
+        },
+        "strings": {
+            "match": "(\".*\")",
+            "name": "string"
+        },
+        "comments": {
+            "match": "(\/\/).*",
+            "name": "comment"
+        },
+        "operators": {
+            "match": "[/+-/*\/=]",
+            "name": "keyword.operator"
+        },
+        "namespaces": {
+            "match": "[a-z]*(::)",
+            "name": "entity.name.function"
         }
     }
 }

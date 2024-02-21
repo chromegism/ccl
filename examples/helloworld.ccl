@@ -1,4 +1,4 @@
-include library "standard";
+include library "standard.cclh";
 
 function main() -> noreturn
 {
