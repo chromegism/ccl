@@ -1,0 +1,6 @@
+include library "standard";
+
+function main() -> noreturn
+{
+    standard::printf("hello world");
+}

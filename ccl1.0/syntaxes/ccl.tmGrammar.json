@@ -1,0 +1,10 @@
+{
+    "scopeName": "source.ccl",
+    "patterns": [{"include": "ccl"}],
+    "repository": {
+        "function": {
+            "match": "function",
+            "name": "keyword"
+        }
+    }
+}

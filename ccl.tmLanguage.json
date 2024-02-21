@@ -1,0 +1,18 @@
+{
+    "contributes": {
+        "languages": [
+            {
+            "id": "ccl",
+            "extensions": [".ccl"]
+            }
+        ],
+
+        "grammars": [
+            {
+            "language": "ccl",
+            "scopeName": "source.ccl",
+            "path": "./syntaxes/ccl.tmGrammar.json"
+            }
+        ]
+    }
+}
