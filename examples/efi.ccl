@@ -1,4 +1,4 @@
-include library "efi.cclh";
+include library "efi.ccli";
 
 function main() -> noreturn
 {

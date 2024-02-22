@@ -7,23 +7,24 @@
         {"include": "#comments"},
         {"include": "#types"},
         {"include": "#operators"},
-        {"include": "#namespaces"}
+        {"include": "#namespaces"},
+        {"include": "#invalids"}
     ],
     "repository": {
         "keywords": {
-            "match": "(?<![a-z])((library)|(file)|(noreturn)|(return))(?![a-z])",
+            "match": "(?<![a-zA-Z0-9])((library)|(file)|(noreturn)|(return))(?![a-zA-Z0-9])",
             "name": "keyword"
         },
         "types": {
-            "match": "(?<![a-z])((bool)|(char)|(unsigned)|(long)|((int)|(float)(16|32|64)))(?![a-z])",
+            "match": "(?<![a-zA-Z0-9])((bool)|(char)|(unsigned)|(long)|(((int)|(float))(16|32|64)))(?![a-zA-Z0-9])",
             "name": "keyword"
         },
         "declarations": {
-            "match": "(?<![a-z])((include)|(function)|(define))(?![a-z])",
+            "match": "(?<![a-zA-Z0-9])((include)|(function)|(define))(?![a-zA-Z0-9])",
             "name": "keyword.control"
         },
         "strings": {
-            "match": "(\".*\")",
+            "match": "((\"|').*(\"|'))",
             "name": "string"
         },
         "comments": {
@@ -37,6 +38,10 @@
         "namespaces": {
             "match": "[a-z]*(::)",
             "name": "entity.name.function"
+        },
+        "invalids": {
+            "match": "(;;+)|`",
+            "name": "invalid"
         }
     }
 }

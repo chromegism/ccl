@@ -1,0 +1,35 @@
+include library "standard.ccli";
+include library "math.ccli";
+
+function main() -> noreturn
+{
+    standard::printf("enter a number: ");
+    char input[] = standard::input();
+
+    float inNum = standard::strToFloat(input);
+
+    standard::printf("sin = {math::sin(num)}\n");
+    standard::printf("cos = {math::cos(num)}\n");
+    standard::printf("tan = {math::tan(num)}\n\n");
+
+    standard::printf("arcsin = {math::arcsin(num)}\n");
+    standard::printf("arccos = {math::arccos(num)}\n");
+    standard::printf("arctan = {math::arctan(num)}\n\n");
+
+    standard::printf("sinh = {math::sinh(num)}\n");
+    standard::printf("cosh = {math::cosh(num)}\n");
+    standard::printf("tanh = {math::tanh(num)}\n\n");
+
+    standard::printf("arcsinh = {math::arcsinh(num)}\n");
+    standard::printf("arccosh = {math::arccosh(num)}\n");
+    standard::printf("arctanh = {math::arctanh(num)}\n\n");
+
+    standard::printf("ln = {math::ln(num)}\n");
+    standard::printf("log_10 = {math::log_10(num)}\n");
+    standard::printf("log_2 = {math::log_2(num)}\n\n");
+    
+    standard::printf("exp = {math::exp(num)}\n");
+    standard::printf("sqrt = {math::sqrt(num)}\n\n");
+
+    standard::printf("There are more, i'm just too lazy to add them here")
+}

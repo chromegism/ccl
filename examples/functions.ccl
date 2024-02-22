@@ -1,4 +1,4 @@
-include library "standard.cclh";
+include library "standard.ccli";
 
 function add(int x, int y) -> int
 {
