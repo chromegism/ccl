@@ -31,5 +31,5 @@ function main() -> noreturn
     standard::printf("exp = {math::exp(num)}\n");
     standard::printf("sqrt = {math::sqrt(num)}\n\n");
 
-    standard::printf("There are more, i'm just too lazy to add them here")
+    standard::printf("There are more, i'm just too lazy to add them here");
 }
