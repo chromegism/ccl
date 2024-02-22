@@ -1,0 +1,17 @@
+include library "standard.cclh";
+
+function main() -> noreturn
+{
+    standard::printf("enter the first number: ");
+    char str1[8] = standard::input();
+    int num1 = standard::intToStr(str1);
+
+    standard::printf("\nenter the second number: ");
+    char str2[8] = standard::input();
+    int num2 = standard::intToStr(str2);
+
+    standard::printf("added = {num1 + num2}");
+    standard::printf("subtracted = {num1 - num2}");
+    standard::printf("multiplied = {num1 * num2}");
+    standard::printf("divided = {num1 / num2}");   
+}
