@@ -1,0 +1,19 @@
+include library "standard";
+include library "math";
+include file "goodForTesting.ccli";
+
+constant int16 NUM1 = 3;
+constant float32 NUM2 = 37.6665;
+
+function doSin(float input) -> float
+{
+    x = math::sin(input);
+    return x ** 2;
+}
+
+function main() -> noreturn
+{
+    i = doSin(NUM2) ** NUM1;
+
+    standard::printf("{i}, {goodForTesting::test(NUM1)}");
+}

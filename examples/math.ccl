@@ -1,5 +1,5 @@
-include library "standard.ccli";
-include library "math.ccli";
+include library "standard";
+include library "math";
 
 function main() -> noreturn
 {

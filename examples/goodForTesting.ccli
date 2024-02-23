@@ -1,0 +1,4 @@
+function test(int input) -> bool
+{
+    return input ** input;
+}
